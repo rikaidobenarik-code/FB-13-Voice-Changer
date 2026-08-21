@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0d1117"
+    android:orientation="vertical"
+    android:padding="20px"
+    android:gravity="center_horizontal">
+
+    <!-- عنوان التطبيق -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FB-13 Voice Studio 🎙️"
+        android:textColor="#58a6ff"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- قائمة اختيار الشخصية / الصوت -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="اختر تأثير الصوت:"
+        android:textColor="#c9d1d9"/>
+    
+    <Spinner
+        android:id="@+id/spinnerEffect"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#21262d"
+        android:layout_marginBottom="15dp"/>
+
+    <!-- شريط التحكم (Slider) للطبقة أو الحجم -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="شريط التحكم في شدة ونبرة الصوت:"
+        android:textColor="#c9d1d9"/>
+    
+    <SeekBar
+        android:id="@+id/seekBarPitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:layout_marginBottom="15dp"/>
+
+    <!-- أزرار المؤثرات الخاصة (تنقية، صدى، استوديو) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="10dp">
+
+        <ToggleButton
+            android:id="@+id/btnDenoiser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="فلتر التشوش (مطفأ)"
+            android:textOn="فلتر التشوش (شغال)"
+            android:background="#238636"
+            android:textColor="#ffffff"
+            android:layout_marginRight="5dp"/>
+
+        <ToggleButton
+            android:id="@+id/btnReverb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="صدى الصوت (مطفأ)"
+            android:textOn="صدى الصوت (شغال)"
+            android:background="#1f6feb"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/btnStudioMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOff="وضع استوديو الغناء الاحترافي (مطفأ)"
+        android:textOn="وضع استوديو الغناء الاحترافي (شغال 🎵)"
+        android:background="#8957e5"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- زر التسجيل الأساسي -->
+    <Button
+        android:id="@+id/btnRecord"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="بدء التسجيل اللحظي"
+        android:backgroundTint="#da3633"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>
